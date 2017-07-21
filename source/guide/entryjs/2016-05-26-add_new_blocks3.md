@@ -24,7 +24,7 @@ order: 3
 
 ### 1. 값 블록  
 #### ㄱ. 기본 블록
-![기본 블록]({{site.imageurl}}entryjs/block_create/default_value.png)
+![기본 블록](/docs/images/entryjs/block_create/default_value.png)
 ``` js
 Entry.block = {
     default_value: {
@@ -63,7 +63,7 @@ template 프로퍼티는 작성 되어 있지 않다면 Lang.template 에서 정
 ---  
 
 #### ㄴ. 기본 사용자 입력 블록
-![기본 블록]({{site.imageurl}}entryjs/block_create/default_input_value.png)
+![기본 블록](/docs/images/entryjs/block_create/default_input_value.png)
 ``` js
 Entry.block = {
     default_input_value: {
@@ -88,8 +88,8 @@ Entry.block = {
         },
         class: "test",
         func: function (sprite, script) {            
-            // 해당 값을 getField로 가져오고 
-            // 가져 올때 paramsKeyMap에서 
+            // 해당 값을 getField로 가져오고
+            // 가져 올때 paramsKeyMap에서
             // 정의한 VALUE라는 키값으로 데이터를 가져온다.
             return script.getField("VALUE", script);
         }
@@ -99,14 +99,14 @@ Entry.block = {
 가장 많이 사용되는 블록  
 단독으로 쓰이기 보단, 다른 블록의 파라미터로 사용되어지는 블록  
 사용자에게 직접 입력받는 블록이다.  
-여기서의 핵심은 template의 %1값이다. %1 이라고 정의한 값은 params의 0번째 param속성을 가져오고 
+여기서의 핵심은 template의 %1값이다. %1 이라고 정의한 값은 params의 0번째 param속성을 가져오고
 해당 값을 세팅하도록 되어 있다.  
 
 ---  
 
 #### ㄷ. 중첩 사용자 입력 블록
 
-![기본 블록]({{site.imageurl}}entryjs/block_create/default_multi_input_value.png)
+![기본 블록](/docs/images/entryjs/block_create/default_multi_input_value.png)
 ``` js
 Entry.block = {
     default_multi_input_value: {
@@ -117,9 +117,9 @@ Entry.block = {
         template: "%1 + %2",
         params: [
             {
-                // 중첩되는 Value블록을 만들경우에는 
+                // 중첩되는 Value블록을 만들경우에는
                 // TextInput이 아닌 Block타입으로 생성한다.
-                // Block type에는 string, boolean, param 
+                // Block type에는 string, boolean, param
                 // 3가지 종류의 accept가 존재 한다.
                 type: "Block",
                 accept: "string"
@@ -162,7 +162,7 @@ Entry.block = {
 }
 ```
 자료 계산시 또는 하드웨어 아날로그 값을 처리할때 많이 사용하는 블록 형태이다.  
-해당 블록에서 핵심은 단일 입력 블록을 만들때와는 다르게 `type: "Block"`를 사용해서 
+해당 블록에서 핵심은 단일 입력 블록을 만들때와는 다르게 `type: "Block"`를 사용해서
 값을 가져오는 것과 def > params를 통해 초기값을 세팅한다는 점을 꼼꼼히 봐야한다.  
 
 > 유사한 블록은 계산 블록들과 하드웨어에서 아날로그 처리 블록들이다.  
@@ -171,7 +171,7 @@ Entry.block = {
 
 #### ㄹ. 중첩 사용자 입력 블록 - 드롭다운 적용
 
-![기본 블록]({{site.imageurl}}entryjs/block_create/default_dropdown_input_value.png)
+![기본 블록](/docs/images/entryjs/block_create/default_dropdown_input_value.png)
 ``` js
 Entry.block = {
     default_dropdown_input_value: {
@@ -185,7 +185,7 @@ Entry.block = {
             },
             {
                 type: "Dropdown",
-                // Dropdown 생성 기준은 
+                // Dropdown 생성 기준은
                 // [["key1", "value1"], ["key2", "value2"]]
                 // 처럼 구성이 된다.
                 options: [
@@ -232,7 +232,7 @@ Entry.block = {
     }
 }
 ```
-사용자 키보드 타이핑 입력이 아닌 정해진 값을 선택해서 입력받는 방식으로 드롭다운 블록을 이용할수 있다. 
+사용자 키보드 타이핑 입력이 아닌 정해진 값을 선택해서 입력받는 방식으로 드롭다운 블록을 이용할수 있다.
 기본적으로 드롭다운은 Key, Value방식으로 동작하고 Key는 사용자 에게 보여주는 값이며, Value는 내부적으로 사용되는 값이다.  
 
 > 유사한 블록은 계산블록의 날짜를 가져오는 블록과 하드웨어에서 센서를 골라서 값을 가져오는 기능이다.
@@ -242,7 +242,7 @@ Entry.block = {
 ### 2. 판단 블록  
 
 #### ㄱ. 기본 판단 블록
-![기본 판단 블록]({{site.imageurl}}entryjs/block_create/default_boolean.png)
+![기본 판단 블록](/docs/images/entryjs/block_create/default_boolean.png)
 ``` js
 Entry.block = {
     default_boolean: {
@@ -274,7 +274,7 @@ Entry.block = {
     }
 }
 ```
-IF문을 사용할때 사용하는 파라미터 블럭 이다. 
+IF문을 사용할때 사용하는 파라미터 블럭 이다.
 기본적으로 디지털 값 등 true, false두가지 형태로 나우어지는 데이터에 대해서 구성되어지는 블록이다.  
 
 > 유사한 블록으로는 판단에 마우스를 클릭했는가? 이다.  
@@ -282,7 +282,7 @@ IF문을 사용할때 사용하는 파라미터 블럭 이다.
 ---  
 
 #### ㄴ. 중첩 사용자 입력 판단 블록
-![중첩 사용자 입력 판단 블록]({{site.imageurl}}entryjs/block_create/default_input_boolean.png)
+![중첩 사용자 입력 판단 블록](/docs/images/entryjs/block_create/default_input_boolean.png)
 ``` js
 Entry.block = {
     default_input_boolean: {
@@ -319,14 +319,14 @@ Entry.block = {
     }
 }
 ```
-사용자에게 입력을 받아 값을 비교해 boolean값으로 반환 받는 블록이다. 
-하드웨어 센서 값들을 비교해서 처리하는데 이용할 수 있다. 
+사용자에게 입력을 받아 값을 비교해 boolean값으로 반환 받는 블록이다.
+하드웨어 센서 값들을 비교해서 처리하는데 이용할 수 있다.
 다만 단순 값비교는 이미 존재하는 판단블록으로도 처리가 가능하다.
 
 > 유사한 블록으로는 판단의 숫자 비교블록 이다.
 
 #### ㄷ. 중첩 사용자 드롭다운 판단 블록
-![중첩 사용자 드롭다운 판단 블록]({{site.imageurl}}entryjs/block_create/default_dropdown_boolean.png)
+![중첩 사용자 드롭다운 판단 블록](/docs/images/entryjs/block_create/default_dropdown_boolean.png)
 ``` js
 Entry.block = {
     default_dropdown_boolean: {
@@ -374,7 +374,7 @@ Entry.block = {
     }
 }
 ```
-정해진 목록내에서 입력 값을 받으려면 드롭다운을 사용할수 있다. 
+정해진 목록내에서 입력 값을 받으려면 드롭다운을 사용할수 있다.
 주로 하드웨어의 디지털 입력을 처리 할때 많이 사용한다.
 
 > 유사한 블록으로는 하드웨어 디지털 입력 블록과 판단의 닿았는가 블록이 있다.
@@ -384,7 +384,7 @@ Entry.block = {
 ### 3. 순차 블록  
 
 #### ㄱ. 기본 순차 블록  
-![기본 순차 블록]({{site.imageurl}}entryjs/block_create/default_block.png)
+![기본 순차 블록](/docs/images/entryjs/block_create/default_block.png)
 ``` js
 Entry.block = {
     default_block: {
@@ -419,11 +419,11 @@ Entry.block = {
     }
 }
 ```
-가장 많이 사용하는 블록이다. 순차로 실행되는 블록으로 정해진 기능을 수행하는 블록이다. 
+가장 많이 사용하는 블록이다. 순차로 실행되는 블록으로 정해진 기능을 수행하는 블록이다.
 엔트리에서 가장 많이 사용되며 핵심블록으로 분류할수 있다.  
 
 #### ㄴ. 사용자 입력 순차 블록  
-![기본 순차 블록]({{site.imageurl}}entryjs/block_create/default_input_block.png)
+![기본 순차 블록](/docs/images/entryjs/block_create/default_input_block.png)
 ``` js
 Entry.block = {
     default_input_block: {
@@ -461,12 +461,12 @@ Entry.block = {
     }
 }
 ```
-유저 입력을 받아서 처리하는 순차 블록. 기본적인 생성방법은 기존의 블록들과 다르지 않다. 
+유저 입력을 받아서 처리하는 순차 블록. 기본적인 생성방법은 기존의 블록들과 다르지 않다.
 하드웨어를 처리할때 아날로그 센서값을 반아 처리하는 블록에 자주 사용된다.
 
 
 #### ㄷ. 드롭다운 입력 순차 블록  
-![드롭다운 입력 순차 블록  ]({{site.imageurl}}entryjs/block_create/default_dropdown_block.png)
+![드롭다운 입력 순차 블록  ](/docs/images/entryjs/block_create/default_dropdown_block.png)
 ``` js
 Entry.block = {
     default_dropdown_block: {
