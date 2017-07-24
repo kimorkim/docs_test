@@ -3,7 +3,7 @@ layout: page
 title: 각 블록 모양별 생성 방법
 type: guide
 category: 'Entryjs'
-order: 3
+order: 4
 ---
 
 ### 목차

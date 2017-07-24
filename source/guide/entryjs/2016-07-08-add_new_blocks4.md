@@ -3,7 +3,7 @@ layout: page
 title: 하드웨어 블록 만들기
 type: guide
 category: 'Entryjs'
-order: 4
+order: 5
 ---
 
 하드웨어 블록은 기본적으로 일반 블록과 생성 및 사용법이 같으나 아래와 같은 몇가지 특징이 있습니다.

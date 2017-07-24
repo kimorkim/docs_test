@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 개발환경 세팅
+title: 시작하기
 type: guide
 category: 'Entryjs'
 order: 1

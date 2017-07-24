@@ -9,15 +9,15 @@
 <div id="hero">
   <div class="inner">
     <div class="left">
-      <img class="hero-logo" src="<%- url_for("/images/logo.png") %>">
+      <img class="hero-logo" src="<%- url_for("/images/main.png") %>">
     </div><div class="right">
-      <h2 class="vue">Vue.js</h2>
+      <h2 class="vue">Entry Docs</h2>
       <h1>
-        The Progressive<br>JavaScript Framework
+        엔트리는 누구나 무료로 소프트웨어 교육을 받을 수 있게 개발된 소프트웨어 교육 플랫폼입니다.
       </h1>
       <p>
-        <a class="button" href="<%- url_for("/v2/guide/") %>">GET STARTED</a>
-        <a class="button white" href="https://github.com/vuejs/vue" target="_blank">GITHUB</a>
+        <a class="button" href="<%- url_for("/guide/") %>">시작하기</a>
+        <a class="button white" href="https://github.com/entrylabs/" target="_blank">GITHUB</a>
       </p>
     </div>
   </div>
@@ -26,32 +26,31 @@
 <div id="highlights">
   <div class="inner">
     <div class="point">
-      <h2>Approachable</h2>
-      <p>Already know HTML, CSS and JavaScript? Read the guide and start building things in no time!</p>
+      <h2>Entry Js</h2>
+      <p>엔트리 워크스페이스와 블록을<br>개발 할 수 있는 라이브러리 입니다.</p>
     </div>
 
     <div class="point">
-      <h2>Versatile</h2>
-      <p>Simple, minimal core with an incrementally adoptable stack that can handle apps of any scale.</p>
+      <h2>Entry Hardware</h2>
+      <p>엔트리에 아두이노 등<br>여러 하드웨어를 연결 할 수 있도록<br>도와주는 프로그램 입니다.</p>
     </div>
 
     <div class="point">
-      <h2>Performant</h2>
+      <h2>Entry Mini</h2>
       <p>
-        20kb min+gzip Runtime<br>
-        Blazing Fast Virtual DOM<br>
-        Minimal Optimization Efforts
+        실과 과목 용도로 만들어진<br>
+        작은 규격의 엔트리 입니다.
       </p>
     </div>
   </div>
 </div>
 
 <div id="footer">
-  <a href="https://www.shuttleworthfoundation.org/fellows/flash-grants/" target="_blank">
-    <img src="/images/shuttleworth.png" style="width:200px">
+  <a href="https://www.playentry.org" target="_blank">
+    <img src="<%- url_for("/images/logo_white.png") %>" style="width:120px">
   </a>
   <p>Released under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a><br>
-  Copyright &copy; 2014-<%- new Date().getFullYear() %> Evan You</p>
+  Copyright &copy; 2017 EntryLabs</p>
 </div>
 
 <script>
