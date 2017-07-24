@@ -1,0 +1,362 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>하드웨어 블록 만들기 — Vue.js</title>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <link rel="alternate" hreflang="x-default" href="https://vuejs.org/guide/entryjs/2016-07-08-add_new_blocks4.html">
+        <link rel="alternate" hreflang="zh" href="https://cn.vuejs.org/guide/entryjs/2016-07-08-add_new_blocks4.html">
+        <link rel="alternate" hreflang="ja" href="https://jp.vuejs.org/guide/entryjs/2016-07-08-add_new_blocks4.html">
+        <link rel="alternate" hreflang="ru" href="https://ru.vuejs.org/guide/entryjs/2016-07-08-add_new_blocks4.html">
+        <link rel="alternate" hreflang="ko" href="https://kr.vuejs.org/guide/entryjs/2016-07-08-add_new_blocks4.html">
+        <link rel="alternate" hreflang="pt-BR" href="https://br.vuejs.org/guide/entryjs/2016-07-08-add_new_blocks4.html">
+        <link rel="alternate" hreflang="fr" href="https://fr.vuejs.org/guide/entryjs/2016-07-08-add_new_blocks4.html">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="하드웨어 블록 만들기 — Vue.js">
+        <meta property="og:description" content="">
+        <meta property="og:image" content="https:////docs/images/logo.png">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="하드웨어 블록 만들기 — Vue.js">
+        <meta name="twitter:description" content="">
+        <meta name="twitter:image" content="https:///images/logo.png">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/docs/images/icons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/docs/images/icons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/docs/images/icons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/docs/images/icons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/docs/images/icons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/docs/images/icons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/docs/images/icons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/docs/images/icons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/docs/images/icons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="/docs/images/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/docs/images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/docs/images/icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/docs/images/icons/favicon-16x16.png">
+        <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+        <link rel="icon" href="/docs/images/logo.png" type="image/png">
+
+        <meta name="msapplication-TileColor" content="#4fc08d">
+        <meta name="theme-color" content="#4fc08d">
+
+        <meta name="msapplication-config" content="browserconfig.xml">
+        <link rel="manifest" href="/manifest.json">
+
+        <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Dosis:500&text=Vue.js' rel='stylesheet' type='text/css'>
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- main page styles -->
+        <link rel="stylesheet" href="/docs/css/page.css">
+
+        <!-- this needs to be loaded before guide's inline scripts -->
+        <script src="/docs/js/vue.js"></script>
+        <script>window.PAGE_TYPE = "guide"</script>
+
+        <!-- ga -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', '', '');
+          ga('send', 'pageview');
+        </script>
+    </head>
+    <body class="docs">        <div id="mobile-bar" >
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/docs/">
+    <img src="/docs/images/logo.png">
+  </a>
+  <ul id="nav">
+    <li>
+    <!--
+  <form id="search-form">
+    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
+  </form>
+  -->
+</li>
+<li><a href="/docs/guide/" class="nav-link current">Guide</a></li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link shop">GitHub</a>
+</li>
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="main-menu">
+            <li>
+    <!--
+  <form id="search-form">
+    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
+  </form>
+  -->
+</li>
+<li><a href="/docs/guide/" class="nav-link current">Guide</a></li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link shop">GitHub</a>
+</li>
+
+        </ul>
+        <div class="list">
+            <ul class="menu-root">
+    
+    
+    
+            
+                
+                
+                    
+                        <li><h3>START</h3></li>
+                    
+                
+                <li>
+                    <a href="/docs/guide/index.html" class="sidebar-link">시작하기</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Entry Hw</h3></li>
+                    
+                
+                <li>
+                    <a href="/docs/guide/entry-hw/2016-05-01-getting_started.html" class="sidebar-link">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/entry-hw/2016-05-01-setting_environments.html" class="sidebar-link">개발환경 세팅</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/entry-hw/2016-05-01-basic_guide.html" class="sidebar-link">기본 개발 절차</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/entry-hw/2016-05-03-add_module.html" class="sidebar-link">모듈 추가 방법</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/entry-hw/2017-05-16-enroll_entry-hw.html" class="sidebar-link">하드웨어 등록 서비스 신청하기</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Entryjs</h3></li>
+                    
+                
+                <li>
+                    <a href="/docs/guide/entryjs/2016-12-26-setting_environments.html" class="sidebar-link">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/entryjs/2016-05-22-add_new_blocks.html" class="sidebar-link">블록 명세 작성</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/entryjs/2016-05-26-add_new_blocks2.html" class="sidebar-link">블록 사용 등록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/entryjs/2016-05-26-add_new_blocks3.html" class="sidebar-link">각 블록 모양별 생성 방법</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/entryjs/2016-07-08-add_new_blocks4.html" class="sidebar-link current">하드웨어 블록 만들기</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Entry Mini</h3></li>
+                    
+                
+                <li>
+                    <a href="/docs/guide/entry-mini/2016-12-12-getting_started.html" class="sidebar-link">시작하기</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Etc.</h3></li>
+                    
+                
+                <li>
+                    <a href="/docs/guide/etc/2016-05-03-git_fork.html" class="sidebar-link">Git Fork 방법</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/etc/2016-07-07-faq.html" class="sidebar-link">FAQ</a>
+                </li>
+            
+        
+</ul>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="content guide with-sidebar 2016-07-08-add_new_blocks4-guide">
+    
+      
+    
+    
+      <h1>하드웨어 블록 만들기</h1>
+    
+    <p>하드웨어 블록은 기본적으로 일반 블록과 생성 및 사용법이 같으나 아래와 같은 몇가지 특징이 있습니다.</p>
+<ol>
+<li>블록색상 고정(#00979D)</li>
+<li>하드웨어 연결 프로그램에 값 읽고 쓰기<ol>
+<li>Entry.hw.sendQueue (값 보내기)</li>
+<li>Entry.hw.portData (값 읽기)</li>
+</ol>
+</li>
+<li>하드웨어 초기값 설정<ol>
+<li>Entry.(하드웨어이름).setZero</li>
+</ol>
+</li>
+<li>isNorFor와 Class의 활용<ol>
+<li>isNotFor</li>
+<li>Class</li>
+</ol>
+</li>
+</ol>
+<p>위의 내용에 대한 설명은 다음과 같습니다.</p>
+<hr>
+<h3 id="블록생상-고정"><a href="#블록생상-고정" class="headerlink" title="블록생상 고정"></a>블록생상 고정</h3><p>하드웨어 블록은 현재는 <code>#00979D</code>로 고정해서 사용하도록 강제하고 있습니다. 이점 양해부탁드리며 앞으로 소스 개발시 해당 부분 변동 없이 처리 부탁드립니다.</p>
+<h3 id="하드웨어-연결프로그램에-값-읽고-쓰기"><a href="#하드웨어-연결프로그램에-값-읽고-쓰기" class="headerlink" title="하드웨어 연결프로그램에 값 읽고 쓰기"></a>하드웨어 연결프로그램에 값 읽고 쓰기</h3><h4 id="1-Entry-hw-sendQueue-값-보내기"><a href="#1-Entry-hw-sendQueue-값-보내기" class="headerlink" title="1. Entry.hw.sendQueue (값 보내기)"></a>1. Entry.hw.sendQueue (값 보내기)</h4><p>블록 명세를 보면 func에 블록의 기본 행동을 정의하도록 되어 있습니다. 엔트리 프로그램에서는 정의된 주기대로 websocket을 통해 하드웨어에 데이터를 전달하는데 이때 전달하는 값이 Entry.hw.sendQueue의 값입니다. text형태의 어떠한 값이라고 sendQueue를 통해 전달할수 있고 적절하게 하드웨어에서 받아서 처리 한다면 어떠한 형태의 text도 전달 가능합니다. 다만, 성능이슈가 발생할수 있으므로 최대한 적은 데이터를 보내주시고 JSON형태의 데이터를 권장합니다.</p>
+<h5 id="사용-예"><a href="#사용-예" class="headerlink" title="사용 예"></a>사용 예</h5><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> (<span class="params">sprite, script</span>) </span>&#123;</div><div class="line">    <span class="comment">// Port 라는 key에 '1'이라는 데이터를 하드웨어 프로그램에 보냄.</span></div><div class="line">    Entry.hw.sendQueue[<span class="string">'Port'</span>] = <span class="string">'1'</span>;</div><div class="line">    <span class="comment">// 다음 블록으로 진행</span></div><div class="line">    <span class="keyword">return</span> script.callRetrurn();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="2-Entry-hw-portData-값-읽기"><a href="#2-Entry-hw-portData-값-읽기" class="headerlink" title="2. Entry.hw.portData (값 읽기)"></a>2. Entry.hw.portData (값 읽기)</h4><p>똑같이 func에 사용하는 값으로 주기적으로 하드웨어에서 들어오는 data값 입니다. 값을 읽어서 화면에 표기해야 하는 블록의 경우 해당 값을 읽어서 처리해야 합니다. 기본적으로 text정보 또는 JSON정보가 포함되어 들어 오게 되어 있습니다. 하드웨어 프로그램에서 처리하여 보내준 데이터가 그대로 들어오도록 구성되어 있으니 하드웨어 모듈을 작성하실때 해당 부분을 염두해 두고 만드시면 좋을 것 같습니다.</p>
+<h5 id="사용-예-1"><a href="#사용-예-1" class="headerlink" title="사용 예"></a>사용 예</h5><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> (<span class="params">sprite, script</span>) </span>&#123;</div><div class="line">    <span class="comment">// Port 라는 key값을 가진 정보를 읽는다.</span></div><div class="line">    <span class="keyword">var</span> result = Entry.hw.portData[<span class="string">'Port'</span>];</div><div class="line">    <span class="comment">// 값을 전달함.</span></div><div class="line">    <span class="keyword">return</span> result;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="하드웨어-초기값-설정"><a href="#하드웨어-초기값-설정" class="headerlink" title="하드웨어 초기값 설정"></a>하드웨어 초기값 설정</h3><p>엔트리 프로그램을 주기적으로 시작하기와 정지하기를 사용자가 수행하게 되고 정지하는 순간 엔트리 작품의 상태가 초기로 돌아가도록 되어 있습니다. 이에 맞춰서 하드웨어도 초기값(아무것도 동작하지 않았던 최초의 상태)으로 설정해줘야 합니다. 물론, 개발방향에 따라 해당기능이 필요 없을수도 있습니다. 이것은 개발자 본인이 판단하시고 작성해 주시면 됩니다.</p>
+<h4 id="Entry-하드웨어명-setZero"><a href="#Entry-하드웨어명-setZero" class="headerlink" title="Entry.(하드웨어명).setZero"></a>Entry.(하드웨어명).setZero</h4><p>기본적으로 entryjs/src/blocks/(작성하신 하드웨어 오브젝트 정의 스크립트).js 이곳에 작성한 자바스크립에서 setZero를 정의하도록 합니다. (block_arduino.js롤 참고해 보시는것도 좋습니다.) 해당 소스에는 Entry.hw.sendQueue에 초기값을로 동작할 데이터를 세팅 하고 Entry.hw.update()를 실행시켜서 하드웨어쪽으로 데이터를 보내도록 정의하면 됩니다.</p>
+<h5 id="사용예"><a href="#사용예" class="headerlink" title="사용예"></a>사용예</h5><figure class="highlight js"><table><tr><td class="code"><pre><div class="line">setZero: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// Port라는 key값을 가진데이터의 초기값은 0</span></div><div class="line">    Entry.hw.sendQueue[<span class="string">'Port'</span>] = <span class="string">'0'</span>;</div><div class="line">    <span class="comment">// 해당 데이터를 하드웨어 전달한다.</span></div><div class="line">    Entry.hw.update();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="isNorFor와-Class의-활용"><a href="#isNorFor와-Class의-활용" class="headerlink" title="isNorFor와 Class의 활용"></a>isNorFor와 Class의 활용</h3><p>isNotFor와 Class는 사용자에게 블록을 알맞게 보여주는 역할을 합니다.</p>
+<h4 id="isNotFor"><a href="#isNotFor" class="headerlink" title="isNotFor"></a>isNotFor</h4><p>isNotFor의 역할은 해당 하드웨어가 연결되었을때 해당 하드웨어를 사용자에게 보여주는 역할을 하게 되어있습니다. isNotFor에 적힐 데이터는 Entry.(적성한 하드웨어 오브젝트).name 이 매칭되도록 되어 있습니다. 해당 몇칭이 대소문자 까지 정확히 매칭되어야 해당 하드웨어가 연결되었을때 정확히 표현 할수 있습니다. 다만 해당 내용을 작성하지 않을 경우 항상 표시되도록 되는데 이렇게 작성하시면 저희쪽 반영이 Reject사유가 되니 빠짐없이 채워주시기 바랍니다.</p>
+<h4 id="Class"><a href="#Class" class="headerlink" title="Class"></a>Class</h4><p>Class의 경우에는 블록들간의 구분선을 보여주는 역할을 합니다. 기본적으로 데이터 get과 set정도의 구분이나 특정 상황에서만 쓰는 블록들간의 그룹핑을 해주는 역할이라고 보시면 됩니다. 기본적으로 (entryjs)/extren/util/static.js category에 등록된 블록 순서대로 블록이 표현되며 해당 class가 변경될때마다 구분선이 생기므로 static.js에 category를 넣어주실때 순서를 잘 생각하고 작성해주시면 됩니다.</p>
+
+    
+      <div class="guide-links">
+        
+          <span>← <a href="/docs/guide/entryjs/2016-05-26-add_new_blocks3.html">각 블록 모양별 생성 방법</a></span>
+        
+        
+      </div>
+    
+    <div class="footer">
+      Caught a mistake or want to contribute to the documentation?
+      <!-- <a href="https://github.com/entrylabs/docs/blob/master/src/guide/entryjs/2016-07-08-add_new_blocks4.md" target="_blank"> -->
+      <a href="https://github.com/kimorkim/docs_test/blob/master/source/guide/entryjs/2016-07-08-add_new_blocks4.md" target="_blank">
+        Edit this page on Github!
+      </a>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/docs/js/smooth-scroll.min.js"></script>
+        
+
+        <!-- main custom script for sidebars, version selects etc. -->
+        <script src="/docs/js/css.escape.js"></script>
+        <script src="/docs/js/common.js"></script>
+
+        <!-- search -->
+        <link href="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/docs/css/search.css">
+        <script src="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+        <script>
+        [
+          '#search-query-nav',
+          '#search-query-sidebar',
+          '#search-query-menu'
+        ].forEach(function (selector) {
+          if (!document.querySelector(selector)) return
+          // search index defaults to v2
+          var match = window.location.pathname.match(/^\/(v\d+)/)
+          var version = match ? match[1] : 'v2'
+          docsearch({
+            appId: 'BH4D9OD16A',
+            apiKey: '85cc3221c9f23bfbaa4e3913dd7625ea',
+            indexName: 'vuejs',
+            inputSelector: selector,
+            algoliaOptions: { facetFilters: ["version:" + version] }
+          })
+        })
+        </script>
+
+        <!-- fastclick -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
+</html>

@@ -1,0 +1,341 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>FAQ — Vue.js</title>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <link rel="alternate" hreflang="x-default" href="https://vuejs.org/guide/etc/2016-07-07-faq.html">
+        <link rel="alternate" hreflang="zh" href="https://cn.vuejs.org/guide/etc/2016-07-07-faq.html">
+        <link rel="alternate" hreflang="ja" href="https://jp.vuejs.org/guide/etc/2016-07-07-faq.html">
+        <link rel="alternate" hreflang="ru" href="https://ru.vuejs.org/guide/etc/2016-07-07-faq.html">
+        <link rel="alternate" hreflang="ko" href="https://kr.vuejs.org/guide/etc/2016-07-07-faq.html">
+        <link rel="alternate" hreflang="pt-BR" href="https://br.vuejs.org/guide/etc/2016-07-07-faq.html">
+        <link rel="alternate" hreflang="fr" href="https://fr.vuejs.org/guide/etc/2016-07-07-faq.html">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="FAQ — Vue.js">
+        <meta property="og:description" content="">
+        <meta property="og:image" content="https:////docs/images/logo.png">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="FAQ — Vue.js">
+        <meta name="twitter:description" content="">
+        <meta name="twitter:image" content="https:///images/logo.png">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/docs/images/icons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/docs/images/icons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/docs/images/icons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/docs/images/icons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/docs/images/icons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/docs/images/icons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/docs/images/icons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/docs/images/icons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/docs/images/icons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="/docs/images/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/docs/images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/docs/images/icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/docs/images/icons/favicon-16x16.png">
+        <meta name="msapplication-TileImage" content="/images/icons/ms-icon-144x144.png">
+        <link rel="icon" href="/docs/images/logo.png" type="image/png">
+
+        <meta name="msapplication-TileColor" content="#4fc08d">
+        <meta name="theme-color" content="#4fc08d">
+
+        <meta name="msapplication-config" content="browserconfig.xml">
+        <link rel="manifest" href="/manifest.json">
+
+        <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Dosis:500&text=Vue.js' rel='stylesheet' type='text/css'>
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- main page styles -->
+        <link rel="stylesheet" href="/docs/css/page.css">
+
+        <!-- this needs to be loaded before guide's inline scripts -->
+        <script src="/docs/js/vue.js"></script>
+        <script>window.PAGE_TYPE = "guide"</script>
+
+        <!-- ga -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', '', '');
+          ga('send', 'pageview');
+        </script>
+    </head>
+    <body class="docs">        <div id="mobile-bar" >
+            <a class="menu-button"></a>
+            <a class="logo" href="/"></a>
+        </div>
+        <div id="header">
+  <a id="logo" href="/docs/">
+    <img src="/docs/images/logo.png">
+  </a>
+  <ul id="nav">
+    <li>
+    <!--
+  <form id="search-form">
+    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
+  </form>
+  -->
+</li>
+<li><a href="/docs/guide/" class="nav-link current">Guide</a></li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link shop">GitHub</a>
+</li>
+
+  </ul>
+</div>
+
+        
+            <div id="main" class="fix-sidebar">
+                
+                    
+    <div class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="main-menu">
+            <li>
+    <!--
+  <form id="search-form">
+    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
+  </form>
+  -->
+</li>
+<li><a href="/docs/guide/" class="nav-link current">Guide</a></li>
+<li>
+  <a href="http://github.com/entrylabs/" target="_blank" class="nav-link shop">GitHub</a>
+</li>
+
+        </ul>
+        <div class="list">
+            <ul class="menu-root">
+    
+    
+    
+            
+                
+                
+                    
+                        <li><h3>START</h3></li>
+                    
+                
+                <li>
+                    <a href="/docs/guide/index.html" class="sidebar-link">시작하기</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Entry Hw</h3></li>
+                    
+                
+                <li>
+                    <a href="/docs/guide/entry-hw/2016-05-01-getting_started.html" class="sidebar-link">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/entry-hw/2016-05-01-setting_environments.html" class="sidebar-link">개발환경 세팅</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/entry-hw/2016-05-01-basic_guide.html" class="sidebar-link">기본 개발 절차</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/entry-hw/2016-05-03-add_module.html" class="sidebar-link">모듈 추가 방법</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/entry-hw/2017-05-16-enroll_entry-hw.html" class="sidebar-link">하드웨어 등록 서비스 신청하기</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Entryjs</h3></li>
+                    
+                
+                <li>
+                    <a href="/docs/guide/entryjs/2016-12-26-setting_environments.html" class="sidebar-link">시작하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/entryjs/2016-05-22-add_new_blocks.html" class="sidebar-link">블록 명세 작성</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/entryjs/2016-05-26-add_new_blocks2.html" class="sidebar-link">블록 사용 등록</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/entryjs/2016-05-26-add_new_blocks3.html" class="sidebar-link">각 블록 모양별 생성 방법</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/entryjs/2016-07-08-add_new_blocks4.html" class="sidebar-link">하드웨어 블록 만들기</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Entry Mini</h3></li>
+                    
+                
+                <li>
+                    <a href="/docs/guide/entry-mini/2016-12-12-getting_started.html" class="sidebar-link">시작하기</a>
+                </li>
+            
+        
+    
+            
+                
+                
+                    
+                        <li><h3>Etc.</h3></li>
+                    
+                
+                <li>
+                    <a href="/docs/guide/etc/2016-05-03-git_fork.html" class="sidebar-link">Git Fork 방법</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/etc/2016-07-07-faq.html" class="sidebar-link current">FAQ</a>
+                </li>
+            
+        
+</ul>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="content guide with-sidebar 2016-07-07-faq-guide">
+    
+      
+    
+    
+      <h1>FAQ</h1>
+    
+    <p><strong>개발환경에 필요한게 일단 NodeJS이고, NodeJS를 깔면 npm 설치가 가능해지니 npm 설치로 grunt, grunt-cli, Electron-prebuilt 이 세가지의 패키지만 설치하면는 건가요?</strong></p>
+<p>개발환경은 그렇습니다. 혹시 패키징(빌드) 까지 필요하시다면 C++ 컴파일러(보통 VS 2015 Comunity), python 2.7.11 버전이 필요합니다.</p>
+<p><br><br><strong>개발환경 세팅할때 환경변수 설정은 따로 필요없나요?</strong>  </p>
+<p>기본적으로 자동으로 환경변수 세팅이 완료됩니다. 하지만 개발자 PC의 세팅여부에 따라 따로 지정해야 동작할 여지도 있습니다.</p>
+<p><br><br><strong>블록을 개발할때 쓸 IDE환경은 자바가 지원된다는 전제하에 아무거나 상관없습니까? <br>(ex. eclipse) 추천하는 것이 있다면 추천해주세요</strong>  </p>
+<p>자바스크립트 어시스트를 잘해 줄 수 있는 가볍운 텍스트 에디터를 추천합니다. 저희쪽에서 사용하는 에디터는 vim, sublime text, atom등이 있으며 개인적으로 sublime text를 추천합니다.</p>
+<p><br><br><strong>하드웨어기기가 연결되어 있는 상태에서 소스 코딩작업을 한 후 git에 올리고, 펌웨어 다운을하면 실시간으로 개발한 블럭이 보여지나요?</strong></p>
+<p>블럭이 보여지는것과 git하고는 별개 라고 생각하시면 됩니다.<br>git에 소스를 올리는 것은 실제 운영에 반영하기 위함 이구요.<br>블록확인은 entryjs repository에 example/example.html 파일을 크롬에 띄워서 간편하게 확인하실수 있습니다.</p>
+<p><br><br><strong>아두이노 계열 보드에 펌웨어 업로드 어떻게 하나요?</strong></p>
+<p>아두이노 우노 계열의 보드는 flasher폴더 하위에 하드웨어명.hex로 올려 놓고 하드웨어명.json 에서 하드웨어 명을 firmware로 지정하면 펌웨어 업로드가 가능합니다.</p>
+<p><br><br><strong>블록 개발하는 소스의 위치가 어디인가요?</strong></p>
+<p>블록의 메인소스는 entryjs/src/workspace/block_entry.js 입니다.</p>
+
+    
+      <div class="guide-links">
+        
+        
+      </div>
+    
+    <div class="footer">
+      Caught a mistake or want to contribute to the documentation?
+      <!-- <a href="https://github.com/entrylabs/docs/blob/master/src/guide/etc/2016-07-07-faq.md" target="_blank"> -->
+      <a href="https://github.com/kimorkim/docs_test/blob/master/source/guide/etc/2016-07-07-faq.md" target="_blank">
+        Edit this page on Github!
+      </a>
+    </div>
+</div>
+
+                
+            </div>
+            <script src="/docs/js/smooth-scroll.min.js"></script>
+        
+
+        <!-- main custom script for sidebars, version selects etc. -->
+        <script src="/docs/js/css.escape.js"></script>
+        <script src="/docs/js/common.js"></script>
+
+        <!-- search -->
+        <link href="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/docs/css/search.css">
+        <script src="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+        <script>
+        [
+          '#search-query-nav',
+          '#search-query-sidebar',
+          '#search-query-menu'
+        ].forEach(function (selector) {
+          if (!document.querySelector(selector)) return
+          // search index defaults to v2
+          var match = window.location.pathname.match(/^\/(v\d+)/)
+          var version = match ? match[1] : 'v2'
+          docsearch({
+            appId: 'BH4D9OD16A',
+            apiKey: '85cc3221c9f23bfbaa4e3913dd7625ea',
+            indexName: 'vuejs',
+            inputSelector: selector,
+            algoliaOptions: { facetFilters: ["version:" + version] }
+          })
+        })
+        </script>
+
+        <!-- fastclick -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body)
+        }, false)
+        </script>
+    </body>
+</html>
